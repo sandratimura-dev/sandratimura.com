@@ -1,0 +1,1609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sandra’s social media management portfolio</title>
+<meta name="description" content="Sandra Timura, social media manager in Copenhagen. Strategy, community building, content production and UGC for Vivino, Canvas Student, Mothery and more.">
+<link rel="canonical" href="https://www.sandratimura.com/">
+<!-- How the link looks when shared on LinkedIn, Slack, iMessage and similar -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.sandratimura.com/">
+<meta property="og:title" content="Sandra Timura, social media management portfolio">
+<meta property="og:description" content="Strategy, community building, content production and UGC for Vivino, Canvas Student, Mothery and more.">
+<meta property="og:image" content="https://www.sandratimura.com/images/intro-poster.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #ffffff;
+    --ink: #000000;
+    --muted: #5f5f5f;
+    --tile: #dadada;
+    --bar-before: #8c8c8c;
+    --tile-ink: #1f1f1f;
+    --line: #e6e6e6;
+    --focus: #2a5bd7;
+    --growth: #1a7f45;
+    color-scheme: light;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #161616;
+      --ink: #f3f3f3;
+      --muted: #a8a8a8;
+      --tile: #2e2e2e;
+      --bar-before: #7a7a7a;
+      --tile-ink: #e8e8e8;
+      --line: #333333;
+      --focus: #8fb0ff;
+    --growth: #4cc27a;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #161616;
+    --ink: #f3f3f3;
+    --muted: #a8a8a8;
+    --tile: #2e2e2e;
+    --bar-before: #7a7a7a;
+    --tile-ink: #e8e8e8;
+    --line: #333333;
+    --focus: #8fb0ff;
+    --growth: #4cc27a;
+    color-scheme: dark;
+  }
+  *, *::before, *::after { box-sizing: inherit; }
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Schibsted Grotesk", "Helvetica Neue", Arial, sans-serif;
+    font-size: 1.0625rem;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: clip;
+  }
+  img { max-width: 100%; display: block; }
+  :focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+
+  .page {
+    max-width: 66rem;
+    margin: 0 auto;
+    padding: clamp(4.5rem, 12vw, 9rem) clamp(1.5rem, 7vw, 5rem) 0;
+    container-type: inline-size;
+  }
+
+  /* Sized to the content width so the title always sits on two lines */
+  h1 {
+    margin: 0 0 clamp(2.75rem, 7vw, 4.5rem);
+    font-size: 7.4cqi;
+    font-weight: 500;
+    line-height: 0.98;
+    letter-spacing: -0.025em;
+    text-transform: uppercase;
+    text-wrap: balance;
+  }
+  /* On phones, a larger title that wraps onto more lines */
+  @media (max-width: 40rem) {
+    h1 { font-size: clamp(2.4rem, 10cqi, 2.8rem); }
+  }
+  /* Letters set up by the script for the hover magnify effect */
+  .magnify .word { white-space: nowrap; }
+  .magnify .char { display: inline-block; transform-origin: 50% 50%; will-change: transform; }
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .video {
+    aspect-ratio: 16 / 9;
+    background: var(--tile);
+    color: var(--tile-ink);
+    display: grid;
+    place-items: center;
+    font-size: clamp(1rem, 2.4vw, 1.4rem);
+  }
+  .video video { display: block; width: 100%; height: 100%; object-fit: cover; background: var(--tile); }
+
+  .about { margin-top: clamp(2.75rem, 6vw, 4.5rem); }
+  .about h2 {
+    margin: 0 0 1rem;
+    font-size: clamp(1.4rem, 3vw, 1.75rem);
+    font-weight: 700;
+  }
+  .about p { margin: 0 0 1.25rem; }
+
+  .work { margin-top: clamp(6rem, 15vw, 11rem); }
+  .work > h2 {
+    margin: 0 0 clamp(2rem, 5vw, 3.25rem);
+    font-size: clamp(2.4rem, 8vw, 4.5rem);
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+  }
+  .grid {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(2.5rem, 6vw, 4.5rem) clamp(1rem, 4vw, 3rem);
+  }
+  .case-link {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    width: 100%;
+    background: none;
+    border: 0;
+    padding: 0;
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+  }
+  .tile {
+    aspect-ratio: 1 / 0.94;
+    background: var(--tile);
+    color: var(--tile-ink);
+    padding: clamp(0.9rem, 3vw, 2rem);
+    font-size: clamp(0.95rem, 2.3vw, 1.45rem);
+    line-height: 1.25;
+    overflow: hidden;
+  }
+  .tile img { width: 100%; height: 100%; object-fit: cover; }
+  .tile.has-image { padding: 0; }
+  .tile img { transition: transform 0.6s ease, filter 0.6s ease; }
+  @media (hover: hover) {
+    .case-link:hover .tile img { transform: scale(1.06); filter: brightness(0.82); }
+  }
+  .case-link:focus-visible .tile img { transform: scale(1.06); filter: brightness(0.82); }
+  .case-name {
+    display: block;
+    text-align: right;
+    margin-top: 0.75rem;
+    font-size: clamp(1rem, 2.4vw, 1.5rem);
+  }
+  .case-link:hover .case-name { text-decoration: underline; text-underline-offset: 0.18em; text-decoration-thickness: 1px; }
+
+  /* Home page opening: the title fills the whole first screen, the video starts below it */
+  .hero {
+    position: relative;
+    width: 100vw;
+    margin: 0 calc(50% - 50vw) clamp(2rem, 5vw, 3rem);
+    min-height: calc(100svh - clamp(4.5rem, 12vw, 9rem));
+    padding: 0 clamp(1rem, 3vw, 2.5rem) clamp(1.5rem, 4vw, 3rem);
+    display: flex;
+    align-items: center;
+  }
+  .hero h1 {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    width: 100%;
+    font-size: min(12.6vw, 19svh);
+    line-height: 0.95;
+  }
+  /* Objects that pop out around the title on hover */
+  /* Covers the whole first screen, up to the very top, behind the title */
+  .hero-objects { position: absolute; inset: calc(-1 * clamp(4.5rem, 12vw, 9rem)) 0 0; z-index: 0; overflow: hidden; pointer-events: none;
+    /* Soft fade along the bottom edge instead of a hard cut */
+    -webkit-mask-image: linear-gradient(to bottom, #000 calc(100% - clamp(6rem, 16vh, 10rem)), transparent);
+    mask-image: linear-gradient(to bottom, #000 calc(100% - clamp(6rem, 16vh, 10rem)), transparent);
+  }
+  .hero-object {
+    position: absolute;
+    width: var(--w);
+    height: auto;
+    margin: calc(var(--w) / -2) 0 0 calc(var(--w) / -2);
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.12));
+    animation: hero-pop 1.7s cubic-bezier(0.2, 0.9, 0.3, 1.2) forwards;
+  }
+  @keyframes hero-pop {
+    0% { opacity: 0; transform: translate(0, 0) rotate(0deg) scale(0.2); }
+    18% { opacity: 1; transform: translate(calc(var(--dx) * 0.6), calc(var(--dy) * 0.6)) rotate(var(--r)) scale(1.08); }
+    70% { opacity: 1; transform: translate(var(--dx), var(--dy)) rotate(var(--r)) scale(1); }
+    100% { opacity: 0; transform: translate(var(--dx), calc(var(--dy) + 14px)) rotate(var(--r)) scale(0.9); }
+  }
+  /* "Check my CV": a title and the envelope, which lifts gently on hover */
+  /* Title on the left with a curved arrow pointing at the envelope */
+  .cv { margin-top: clamp(6rem, 15vw, 11rem); display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: clamp(1rem, 2.5vw, 2rem); }
+  .cv-label { flex: none; }
+  .cv .envelope-wrap { flex: none; margin: 0; width: clamp(15rem, 23vw, 21rem); }
+  .cv-label { align-self: center; }
+  .cv h2 { margin: 0; font-size: clamp(1.4rem, 3vw, 1.75rem); font-weight: 700; text-transform: uppercase; letter-spacing: -0.01em; }
+  .cv-arrow { display: block; width: 10rem; height: auto; margin: 0.75rem 0 0 0.5rem; overflow: visible; }
+  .cv-arrow path { fill: none; stroke: var(--ink); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  /* Phones: title and a smaller arrow above the envelope */
+  @media (max-width: 45.99rem) {
+    .cv { flex-direction: column; align-items: stretch; }
+    .cv-arrow { width: 6rem; margin-left: 2.5rem; transform: rotate(25deg); }
+    .cv .envelope-wrap { width: min(100%, 21rem); margin: 0 auto; }
+  }
+  .envelope-wrap { display: block; position: relative; margin: 0 auto; width: min(100%, 24rem); transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.3, 1); }
+  .envelope { display: block; width: 100%; height: auto; filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.12)); }
+  /* CV slot: the card area of the envelope picture (593 x 660), cut along the flaps in front of it */
+  .envelope-cv {
+    position: absolute;
+    left: 11.47%; top: 15.76%; width: 77.57%; height: 45.15%;
+    clip-path: polygon(0 0, 100% 0, 100% 59.7%, 61.3% 100%, 40.65% 99.3%, 0 59.06%);
+  }
+  .envelope-cv:empty { display: none; }
+  .envelope-cv img { display: block; }
+  .envelope-wrap:focus-visible { outline: 2px solid var(--focus); outline-offset: 6px; }
+  .envelope-cv img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+  /* The envelope and the CV move as one */
+  @media (hover: hover) and (prefers-reduced-motion: no-preference) {
+    .envelope-wrap:hover { transform: translateY(-8px) rotate(-1.5deg); }
+  }
+  /* Minimal header that stays at the top while scrolling */
+  .site-header {
+    position: fixed;
+    inset: 0 0 auto;
+    z-index: 50;
+    height: 3.75rem;
+    padding: 0 clamp(1rem, 3vw, 2.5rem);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    background: color-mix(in srgb, var(--bg) 88%, transparent);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+  }
+  .site-header a { color: inherit; text-decoration: none; }
+  .brand { font-weight: 500; letter-spacing: -0.01em; }
+  .site-header ul { list-style: none; margin: 0; padding: 0; display: flex; align-items: center; gap: clamp(0.9rem, 2.5vw, 2rem); font-size: 0.95rem; }
+  .site-header nav a:not(.header-cta):hover { text-decoration: underline; text-underline-offset: 0.2em; }
+  .header-cta { display: inline-block; padding: 0.4rem 0.9rem; border: 1px solid var(--ink); transition: background 0.2s ease, color 0.2s ease; }
+  .header-cta:hover, .header-cta:focus-visible { background: var(--ink); color: var(--bg); }
+  @media (max-width: 30rem) {
+    .brand { display: none; }
+    .site-header { justify-content: flex-end; }
+    .site-header ul { font-size: 0.85rem; gap: 0.85rem; }
+    .header-cta { padding: 0.35rem 0.7rem; }
+  }
+  /* Links in the header land below it, not under it */
+  html { scroll-padding-top: calc(3.75rem + 1.5rem); }
+  @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+
+  /* Footer: the last thing on every page */
+  .site-footer {
+    margin-top: clamp(4.5rem, 10vw, 8rem);
+    padding: clamp(2.5rem, 6vw, 4rem) 0 clamp(1.5rem, 3vw, 2.25rem);
+    border-top: 1px solid var(--line);
+  }
+  .footer-top { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 1rem 2rem; }
+  .detail .footer-title, .footer-title { margin: 0; font-size: clamp(2rem, 6vw, 3.75rem); font-weight: 500; line-height: 1; letter-spacing: -0.02em; text-transform: uppercase; }
+  .footer-email { color: inherit; font-size: clamp(1.1rem, 2.4vw, 1.4rem); text-underline-offset: 0.2em; }
+  .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr)); gap: 2rem; margin-top: clamp(2.5rem, 6vw, 4rem); }
+  .detail .footer-label, .footer-label { margin: 0 0 0.75rem; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); }
+  .site-footer ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.4rem; }
+  .site-footer a { color: inherit; }
+  .footer-bottom { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; margin-top: clamp(2.5rem, 6vw, 4rem); padding-top: 1.25rem; border-top: 1px solid var(--line); font-size: 0.9rem; color: var(--muted); }
+  .to-top { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; text-decoration: underline; text-underline-offset: 0.2em; }
+  /* In a case page the footer follows the Next case link closely */
+  .next + .site-footer { margin-top: clamp(2.5rem, 6vw, 4rem); }
+
+  /* Case detail */
+  dialog {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    max-height: 100%;
+    background: var(--bg);
+    color: var(--ink);
+  }
+  dialog::backdrop { background: var(--bg); }
+  dialog[open] { animation: open 0.28s ease-out; }
+  @keyframes open { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+  .detail {
+    height: 100%;
+    overflow-y: auto;
+    padding: env(safe-area-inset-top, 0px) 0 env(safe-area-inset-bottom, 0px);
+  }
+  .detail-inner {
+    max-width: 66rem;
+    margin: 0 auto;
+    padding: clamp(1.75rem, 4vw, 3rem) clamp(1.5rem, 7vw, 5rem) 0;
+  }
+  .close {
+    font: inherit;
+    font-size: 1rem;
+    background: none;
+    border: 1px solid var(--ink);
+    color: var(--ink);
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+  }
+  /* Small, quiet link back to the case tiles */
+  .back { display: inline-flex; align-items: center; gap: 0.45rem; color: var(--muted); text-decoration: none; font-size: 0.85rem; font-weight: 300; letter-spacing: 0.01em; }
+  .back svg { width: 1.15rem; height: 1.15rem; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; transition: transform 0.25s ease; }
+  .back:hover, .back:focus-visible { color: var(--ink); }
+  @media (hover: hover) and (prefers-reduced-motion: no-preference) { .back:hover svg { transform: translateX(-3px); } }
+  .detail h2:focus { outline: none; }
+  .detail h2 {
+    margin: clamp(3rem, 8vw, 5.5rem) 0 1rem;
+    font-size: clamp(2.2rem, 7vw, 4.5rem);
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+  }
+  .detail .lede {
+    font-size: clamp(1.2rem, 2.6vw, 1.5rem);
+    line-height: 1.35;
+    margin: 0 0 clamp(2.75rem, 6vw, 4rem);
+  }
+  .detail-cover { aspect-ratio: 16 / 9; background: var(--tile); color: var(--tile-ink); display: grid; place-items: center; margin-bottom: clamp(3rem, 7vw, 4.5rem); }
+  .detail-cover.has-image { position: relative; overflow: hidden; }
+  .detail-cover video,
+  .detail-cover img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .story { display: grid; gap: clamp(2.75rem, 6vw, 4rem); }
+  .detail h3 { margin: 0 0 0.5rem; font-size: 1.15rem; font-weight: 700; }
+  .detail .section-title {
+    margin: 0 0 0.9rem;
+    font-size: clamp(1.4rem, 3.2vw, 1.9rem);
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+  }
+  .detail p { margin: 0 0 1rem; }
+  .results { margin-top: clamp(3rem, 7vw, 4.5rem); padding-top: 2rem; border-top: 1px solid var(--line); }
+  .packaging { margin: clamp(3rem, 7vw, 4.5rem) 0 0; padding-top: 2rem; border-top: 1px solid var(--line); }
+  .packaging { position: relative; }
+  .packaging > img { display: block; width: 100%; height: auto; }
+  .placeholder-note { color: var(--muted); }
+  /* Results stacked: a big bold number with the explanation underneath */
+  .stats {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: clamp(1.75rem, 4vw, 2.5rem);
+  }
+  .stat-value {
+    display: block;
+    font-size: clamp(2.6rem, 6.5vw, 4rem);
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.03em;
+  }
+  .stat-label { display: block; margin-top: 0.5rem; font-size: 1rem; line-height: 1.4; }
+  /* Results side by side: two by two on phones, one row on wider screens */
+  .stats.in-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  @media (min-width: 46rem) { .stats.in-row { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+  .detail .results-note {
+    margin: clamp(1.75rem, 4vw, 2.5rem) 0 1.5rem;
+    font-size: clamp(2.6rem, 6.5vw, 4rem);
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+  }
+  .role { color: var(--muted); }
+  /* Space between the results and the role line when they sit right after each other */
+  .detail .stats + .role { margin-top: clamp(2rem, 5vw, 3rem); }
+  /* Growth chart: grey for the earlier period, ink for the later one */
+  .growth { display: flow-root; margin: clamp(3rem, 7vw, 4.5rem) 0 0; padding-top: 2rem; border-top: 1px solid var(--line); }
+  .detail .growth-sub { margin: 0 0 1rem; color: var(--muted); }
+  .growth-legend { list-style: none; margin: 0 0 1.5rem; padding: 0; display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; font-size: 0.95rem; }
+  .growth-legend li { display: inline-flex; align-items: center; gap: 0.5rem; }
+  .swatch { width: 0.85rem; height: 0.85rem; border-radius: 2px; }
+  .bar-0 { background: var(--bar-before); }
+  .bar-1 { background: var(--ink); }
+  .growth-plot { position: relative; height: clamp(15rem, 38vw, 21rem); margin: 0 0 4.25rem 2.75rem; }
+  .growth-tick { position: absolute; left: 0; right: 0; border-top: 1px solid var(--line); }
+  .growth-tick span { position: absolute; right: 100%; top: -0.6em; padding-right: 0.6rem; font-size: 0.8rem; line-height: 1.2; color: var(--muted); white-space: nowrap; }
+  .growth-tick:first-child { border-top-color: var(--muted); }
+  .growth-groups { position: absolute; inset: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .growth-group { position: relative; }
+  .growth-bars { position: absolute; inset: 0; display: flex; align-items: flex-end; justify-content: center; gap: 2px; }
+  .growth-bar { position: relative; width: clamp(2.25rem, 9vw, 5rem); border-radius: 4px 4px 0 0; transition: opacity 0.2s ease; }
+  .growth-value { position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%); padding-bottom: 0.35rem; font-size: clamp(0.85rem, 1.8vw, 1rem); font-weight: 700; color: var(--ink); white-space: nowrap; }
+  .detail .growth-label { position: absolute; top: 100%; left: 0; right: 0; margin: 0; padding-top: 0.75rem; text-align: center; font-size: 1rem; }
+  .growth-label strong { display: block; }
+  /* Growth highlights: the new numbers and change labels in green */
+  .growth-bar.bar-1 .growth-value, .growth-label strong { color: var(--growth); }
+  /* A curved arrow per bar pair, rising from the earlier bar to the new one, with the growth next to it */
+  .growth-arrow { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none; overflow: visible; }
+  .growth-arrow path { fill: none; stroke: var(--growth); stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+  .growth-arrow .arrow-text { fill: var(--growth); font-family: inherit; font-weight: 700; font-size: clamp(1rem, 2.4vw, 1.5rem); letter-spacing: -0.01em; }
+  .growth-arrow .arrow-line { stroke-dasharray: var(--len); stroke-dashoffset: var(--len); }
+  .growth-arrow .arrow-head, .growth-arrow .arrow-text { opacity: 0; }
+  .growth-plot.arrow-on .arrow-line { transition: stroke-dashoffset 0.55s cubic-bezier(0.45, 0, 0.2, 1) var(--delay); stroke-dashoffset: 0; }
+  .growth-plot.arrow-on .arrow-head { transition: opacity 0.15s ease calc(var(--delay) + 0.5s); opacity: 1; }
+  .growth-plot.arrow-on .arrow-text { transition: opacity 0.25s ease calc(var(--delay) + 0.3s); opacity: 1; }
+  @media (prefers-reduced-motion: reduce) {
+    .burst-float { animation: none; }
+    .burst-face:hover .burst-bit { animation: none; }
+    .growth-arrow .arrow-line { stroke-dashoffset: 0; }
+    .growth-arrow .arrow-head, .growth-arrow .arrow-text { opacity: 1; }
+  }
+  /* Floating face with a magic wand, top right of the chart */
+  .growth { position: relative; }
+  .wizard {
+    position: absolute;
+    top: -3rem;
+    right: calc(-1 * clamp(0.25rem, 4vw, 3.5rem));
+    width: clamp(6.25rem, 15vw, 10.5rem);
+    z-index: 2;
+  }
+  .wizard-float { position: relative; transform: rotate(-12deg); animation: float 4.5s ease-in-out infinite; }
+  .wizard-float > img { display: block; width: 100%; height: auto; }
+  @keyframes float {
+    0%, 100% { transform: translateY(0) rotate(-12deg); }
+    50% { transform: translateY(-8px) rotate(-10deg); }
+  }
+  .wand { position: absolute; left: -38%; top: 34%; width: 62%; aspect-ratio: 1; }
+  .wand svg { display: block; width: 100%; height: 100%; overflow: visible; }
+  .wand-stick { stroke: var(--ink); stroke-width: 6; stroke-linecap: round; }
+  .wand-tip { stroke: var(--bg); stroke-width: 3.5; stroke-linecap: round; }
+  .wand-star { fill: #f2c200; stroke: var(--ink); stroke-width: 1.2; stroke-linejoin: round; }
+  .spark {
+    position: absolute;
+    left: 12%;
+    top: 36%;
+    width: var(--s);
+    height: var(--s);
+    margin: calc(var(--s) / -2) 0 0 calc(var(--s) / -2);
+    border-radius: 50%;
+    background: #ffd21f;
+    box-shadow: 0 0 6px 1px rgba(255, 200, 0, 0.75);
+    opacity: 0;
+    pointer-events: none;
+  }
+  .wizard:hover .spark { animation: spark 0.95s ease-out var(--d) infinite; }
+  /* Orange hearts instead of yellow sparks */
+  .wizard.hearts .spark {
+    width: calc(var(--s) * 2.4);
+    height: calc(var(--s) * 2.4);
+    margin: calc(var(--s) * -1.2) 0 0 calc(var(--s) * -1.2);
+    border-radius: 0;
+    background: #ff6a00;
+    box-shadow: none;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 4.5 6.8 4.5c2.2 0 3.7 1.3 5.2 3 1.5-1.7 3-3 5.2-3 3.8 0 5.9 3.9 4.4 7.3C19.5 16.4 12 21 12 21z'/%3E%3C/svg%3E") center / contain no-repeat;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 4.5 6.8 4.5c2.2 0 3.7 1.3 5.2 3 1.5-1.7 3-3 5.2-3 3.8 0 5.9 3.9 4.4 7.3C19.5 16.4 12 21 12 21z'/%3E%3C/svg%3E") center / contain no-repeat;
+  }
+  @keyframes spark {
+    0% { opacity: 0; transform: translate(0, 0) scale(0.4); }
+    15% { opacity: 1; }
+    100% { opacity: 0; transform: translate(var(--dx), var(--dy)) scale(1); }
+  }
+  @media (max-width: 45.99rem) { .growth.has-wizard > .section-title, .growth.has-wizard .growth-sub { padding-right: 6.5rem; } .wizard { right: 0; } }
+  /* Floating face with a laptop on its left, top right of the packaging picture */
+  .techie {
+    position: absolute;
+    top: -1rem;
+    right: calc(-1 * clamp(0.25rem, 4vw, 3.5rem));
+    width: clamp(5.5rem, 13vw, 9rem);
+    z-index: 2;
+  }
+  .techie-float { position: relative; transform: rotate(8deg); animation: float-right 5s ease-in-out infinite; }
+  .techie-float > img { display: block; width: 100%; height: auto; }
+  @keyframes float-right {
+    0%, 100% { transform: translateY(0) rotate(8deg); }
+    50% { transform: translateY(-8px) rotate(6deg); }
+  }
+  .laptop { position: absolute; left: -48%; bottom: 4%; width: 78%; }
+  .laptop > img { display: block; width: 100%; height: auto; }
+  .ball {
+    position: absolute;
+    left: 42%;
+    top: 40%;
+    width: var(--s);
+    height: var(--s);
+    margin: calc(var(--s) / -2) 0 0 calc(var(--s) / -2);
+    border-radius: 50%;
+    background: #2f8f3a;
+    box-shadow: inset -1px -1px 0 rgba(0, 0, 0, 0.18);
+    opacity: 0;
+    pointer-events: none;
+  }
+  .techie:hover .ball { animation: spark 1.1s ease-out var(--d) infinite; }
+  @media (max-width: 45.99rem) { .techie { right: 0; } }
+  /* Floating plane with Sandra on top, top right of the results */
+  .results.has-plane { position: relative; }
+  .flyer {
+    position: absolute;
+    top: -3.5rem;
+    right: calc(-1 * clamp(0.25rem, 4vw, 3.5rem));
+    width: clamp(8.5rem, 19vw, 13rem);
+    z-index: 2;
+  }
+  .flyer-float { position: relative; animation: fly 5s ease-in-out infinite; }
+  @keyframes fly {
+    0%, 100% { transform: translateY(0) rotate(-4deg); }
+    50% { transform: translateY(-9px) rotate(-2deg); }
+  }
+  .flyer-plane { position: relative; z-index: 1; display: block; width: 100%; height: auto; }
+  .flyer-face { position: absolute; left: 26%; bottom: 36%; width: 40%; height: auto; z-index: 2; }
+  .cam {
+    position: absolute;
+    left: 45%;
+    top: 30%;
+    width: var(--s);
+    height: var(--s);
+    margin: calc(var(--s) / -2) 0 0 calc(var(--s) / -2);
+    background: var(--ink);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 3;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill-rule='evenodd' d='M8.5 4h7l1.6 2.5H20a2 2 0 0 1 2 2V18a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8.5a2 2 0 0 1 2-2h2.9L8.5 4zM12 17a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm0-2a2 2 0 1 1 0-4 2 2 0 0 1 0 4z'/%3E%3C/svg%3E") center / contain no-repeat;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill-rule='evenodd' d='M8.5 4h7l1.6 2.5H20a2 2 0 0 1 2 2V18a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8.5a2 2 0 0 1 2-2h2.9L8.5 4zM12 17a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm0-2a2 2 0 1 1 0-4 2 2 0 0 1 0 4z'/%3E%3C/svg%3E") center / contain no-repeat;
+  }
+  .flyer:hover .cam { animation: spark 1.1s ease-out var(--d) infinite; }
+  /* Keep the plane clear of the numbers */
+  @media (min-width: 46rem) { .results.has-plane .stats.in-row { padding-right: clamp(8rem, 16vw, 11rem); } }
+  @media (max-width: 45.99rem) { .results.has-plane { padding-top: 7.5rem; } .flyer { top: 0.5rem; right: 0; } }
+  /* Glitter sparkles that follow the cursor over the Mothery product photos */
+  .glitter {
+    position: fixed;
+    z-index: 1000;
+    margin: -3px 0 0 -3px;
+    border-radius: 50%;
+    pointer-events: none;
+    box-shadow: 0 0 6px 1px rgba(255, 220, 160, 0.8);
+    animation: glitter 0.9s ease-out forwards;
+  }
+  @keyframes glitter {
+    0% { opacity: 1; transform: translate(0, 0) scale(1); }
+    100% { opacity: 0; transform: translate(var(--gx), var(--gy)) scale(0.3); }
+  }
+  /* Floating face with a hover burst, in the top right corner of a section */
+  .has-face, .gallery.reels { position: relative; }
+  .burst-face { position: absolute; z-index: 2; width: clamp(5rem, 11vw, 8rem); }
+  /* Mothery: the face floats in the empty top right corner of the results */
+  .results.has-face > .burst-face { right: 0; top: clamp(-2.5rem, -3vw, -1rem); width: clamp(5rem, 11vw, 8rem); }
+  @media (max-width: 45.99rem) { .results.has-face { padding-right: 6rem; } }
+  .gallery.reels > .burst-face { right: calc(-1 * clamp(0.25rem, 3vw, 2.5rem)); top: clamp(-11rem, -14vw, -7rem); }
+  .burst-float { position: relative; transform: rotate(7deg); animation: float-right 5s ease-in-out infinite; }
+  .burst-float > img { display: block; width: 100%; height: auto; }
+  .burst-bit {
+    position: absolute;
+    left: 40%;
+    top: 55%;
+    width: var(--s);
+    height: var(--s);
+    margin: calc(var(--s) / -2) 0 0 calc(var(--s) / -2);
+    opacity: 0;
+    pointer-events: none;
+    -webkit-mask: center / contain no-repeat;
+    mask: center / contain no-repeat;
+  }
+  .burst-bit.pacifier { -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill-rule='evenodd' d='M10 3.2a2 2 0 0 1 4 0V7.2h-4z M3 11a9 4 0 1 0 18 0a9 4 0 1 0-18 0z M12 15.2a4 4 0 1 1 0 8a4 4 0 1 1 0-8z m0 1.5a2.5 2.5 0 1 0 0 5a2.5 2.5 0 1 0 0-5z'/%3E%3C/svg%3E"); mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill-rule='evenodd' d='M10 3.2a2 2 0 0 1 4 0V7.2h-4z M3 11a9 4 0 1 0 18 0a9 4 0 1 0-18 0z M12 15.2a4 4 0 1 1 0 8a4 4 0 1 1 0-8z m0 1.5a2.5 2.5 0 1 0 0 5a2.5 2.5 0 1 0 0-5z'/%3E%3C/svg%3E"); }
+  .burst-bit.camera { -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill-rule='evenodd' d='M8.5 4h7l1.6 2.5H20a2 2 0 0 1 2 2V18a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8.5a2 2 0 0 1 2-2h2.9L8.5 4zM12 17a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm0-2a2 2 0 1 1 0-4 2 2 0 0 1 0 4z'/%3E%3C/svg%3E"); mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill-rule='evenodd' d='M8.5 4h7l1.6 2.5H20a2 2 0 0 1 2 2V18a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8.5a2 2 0 0 1 2-2h2.9L8.5 4zM12 17a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm0-2a2 2 0 1 1 0-4 2 2 0 0 1 0 4z'/%3E%3C/svg%3E"); }
+  .burst-face:hover .burst-bit { animation: spark 1.1s ease-out var(--d) infinite; }
+  /* Hover tooltip with the number */
+  .growth-bar:hover::after {
+    content: attr(data-tip);
+    position: absolute;
+    bottom: calc(100% + 2.2rem);
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.45rem 0.7rem;
+    border-radius: 6px;
+    background: var(--ink);
+    color: var(--bg);
+    font-size: 0.85rem;
+    line-height: 1.3;
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 3;
+    animation: tip-in 0.2s ease;
+  }
+  @keyframes tip-in { from { opacity: 0; } }
+  /* Keep tooltips inside the chart at the outer edges */
+  .growth-group:first-child .growth-bar:first-child:hover::after { left: 0; transform: none; }
+  .growth-group:last-child .growth-bar:last-child:hover::after { left: auto; right: 0; transform: none; }
+  .growth-bars:hover .growth-bar { opacity: 0.55; }
+  .growth-bars .growth-bar:hover { opacity: 1; }
+  /* Platforms and side projects under the results */
+  .extra { margin-top: clamp(3rem, 7vw, 4.5rem); padding-top: 2rem; border-top: 1px solid var(--line); }
+  .platforms { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.6rem; }
+  .platforms li { padding: 0.45rem 1rem; border: 1px solid var(--ink); border-radius: 999px; font-size: 1rem; line-height: 1.2; }
+  .detail .side-title { margin: 0 0 1rem; font-size: 1.15rem; font-weight: 700; }
+  .videos { display: grid; gap: clamp(1rem, 3vw, 2rem); }
+  @media (min-width: 46rem) { .videos { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+  .videos { align-items: start; }
+  /* Vertical videos in one row, also on phones */
+  .videos.row { grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: clamp(3rem, 7vw, 4.5rem); }
+  .videos.row .side-video { max-width: none; }
+  .launch .videos.row { margin-top: clamp(1.5rem, 4vw, 2.5rem); }
+  /* Paid ads side by side, top aligned */
+  .ads { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; gap: clamp(1rem, 3vw, 2rem); max-width: 44rem; margin: clamp(1.5rem, 4vw, 2.5rem) auto 0; }
+  .ads img { width: 100%; height: auto; }
+  /* Two-slide posts that switch from the title slide to the explanation slide */
+  .slides.pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(1rem, 3vw, 2rem); max-width: 44rem; margin-inline: auto; margin-top: clamp(1rem, 3vw, 2rem); }
+  .slide-post { display: grid; aspect-ratio: 1; overflow: hidden; background: var(--tile); }
+  .slide-post img { grid-area: 1 / 1; width: 100%; height: 100%; object-fit: cover; }
+  .slide-post img + img { animation: slide-swap 6s ease-in-out infinite; }
+  @keyframes slide-swap { 0%, 40% { opacity: 0; } 50%, 90% { opacity: 1; } 100% { opacity: 0; } }
+  /* Short looping clips that play like GIFs */
+  .loops { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(1rem, 3vw, 2rem); max-width: 44rem; margin: clamp(1rem, 3vw, 2rem) auto 0; }
+  .loops video { display: block; width: 100%; aspect-ratio: 1; object-fit: cover; background: var(--tile); }
+  .side-video { display: block; width: 100%; height: auto; background: var(--tile); }
+  .video-slot { aspect-ratio: 9 / 16; background: var(--tile); color: var(--tile-ink); display: grid; place-items: center; font-size: 0.95rem; }
+  @media (max-width: 45.99rem) { .video-slot, .side-video { max-width: 20rem; width: 100%; margin: 0 auto; } }
+  /* Results with a phone mockup on the right */
+  .results.has-feed { display: grid; gap: clamp(2.5rem, 6vw, 4rem); align-items: center; }
+  @media (min-width: 46rem) { .results.has-feed { grid-template-columns: minmax(0, 1fr) minmax(14rem, 20rem); } }
+  .feed-mockup { position: relative; margin: 0 auto; width: 100%; max-width: 20rem; }
+  .feed-mockup > img { width: 100%; height: auto; }
+  .feed-cells { position: absolute; inset: 0; }
+  .feed-cell {
+    position: absolute;
+    overflow: hidden;
+    transition: transform 0.45s ease, box-shadow 0.45s ease;
+  }
+  .feed-cell img { position: absolute; max-width: none; height: auto; }
+  @media (hover: hover) {
+    .feed-cell:hover {
+      z-index: 2;
+      transform: scale(1.18);
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.28);
+    }
+  }
+  .gallery {
+    margin-top: clamp(3rem, 7vw, 4.5rem);
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(1rem, 3vw, 2rem);
+  }
+  .gallery:not(.has-posts) > div { aspect-ratio: 4 / 5; background: var(--tile); color: var(--tile-ink); display: grid; place-items: center; font-size: 0.95rem; }
+  .detail .gallery-title { margin-top: 0; }
+  .detail .gallery-title.after-story { margin-top: clamp(3rem, 7vw, 4.5rem); }
+  /* Results at the top of a case, with room before the story */
+  .detail .results.top + .story, .lede + .results + .story { margin-top: clamp(4rem, 9vw, 6rem); }
+  .gallery-title + .gallery { margin-top: 0; margin-bottom: clamp(3rem, 7vw, 4.5rem); }
+  /* Real posts: 3 across on wider screens, each opens its Instagram post */
+  @media (min-width: 46rem) { .gallery.has-posts { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+  .post-metrics {
+    list-style: none;
+    margin: 0.7rem 0 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem 0.9rem;
+    font-size: 0.95rem;
+    line-height: 1;
+  }
+  .post-metrics li { display: inline-flex; align-items: center; gap: 0.3rem; }
+  .post-metrics svg { width: 1.1em; height: 1.1em; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+  .gallery .post { display: block; aspect-ratio: 4 / 5; overflow: hidden; background: var(--tile); }
+  .reel { display: block; width: 100%; aspect-ratio: 9 / 16; object-fit: cover; background: var(--tile); }
+  .detail .reel-brand { margin: 0.7rem 0 0; font-size: 1rem; line-height: 1.3; }
+  /* Content library: extra posts and photos, two by two */
+  .library { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(1rem, 3vw, 2rem); }
+  .library-reels { margin: 0 0 clamp(1rem, 3vw, 2rem); }
+  /* A row of three above the two by two grid, same outer edges and gap */
+  .library.library-top { grid-template-columns: repeat(3, minmax(0, 1fr)); margin-bottom: clamp(1rem, 3vw, 2rem); }
+  /* Website screenshots side by side, zooming in on hover */
+  .web-shots { display: grid; gap: clamp(1rem, 3vw, 2rem); margin-top: clamp(1.5rem, 4vw, 2.5rem); }
+  @media (min-width: 46rem) { .web-shots { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  .web-shot { position: relative; border: 1px solid var(--line); }
+  .web-shot > img { display: block; width: 100%; height: auto; }
+  @media (hover: hover) {
+    .web-shot .feed-cell:hover { transform: scale(1.12); }
+  }
+  .blog-shot { max-width: 44rem; margin: clamp(1.5rem, 4vw, 2.5rem) auto 0; }
+  /* Behind the scenes photos: four across on wider screens */
+  .library.bts { margin-top: clamp(1.5rem, 4vw, 2.5rem); }
+  @media (min-width: 46rem) { .library.bts { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+  .library.bts .library-item { aspect-ratio: 3 / 4; }
+  .library-item { aspect-ratio: 4 / 5; overflow: hidden; background: var(--tile); }
+  .library-item img, .library-item video { display: block; width: 100%; height: 100%; object-fit: cover; }
+  .gallery .post img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease, filter 0.6s ease; }
+  @media (hover: hover) {
+    a.post:hover img { transform: scale(1.06); filter: brightness(0.82); }
+  }
+  a.post:focus-visible img { transform: scale(1.06); filter: brightness(0.82); }
+  .next {
+    margin-top: clamp(3.5rem, 8vw, 5rem);
+    display: flex;
+    justify-content: flex-end;
+  }
+  .next a { color: inherit; font-size: clamp(1.1rem, 2.4vw, 1.4rem); }
+
+  @media (prefers-reduced-motion: reduce) {
+    .flyer-float { animation: none; }
+    .flyer:hover .cam { animation: none; }
+    .techie-float { animation: none; }
+    .techie:hover .ball { animation: none; }
+    dialog[open] { animation: none; }
+    /* Keep the title slide and skip the automatic switching */
+    .slide-post img + img { animation: none; opacity: 0; }
+    /* Keep the darkening but skip the zoom */
+    .tile img, .gallery .post img { transition: filter 0.2s ease; }
+    .case-link:hover .tile img,
+    .case-link:focus-visible .tile img,
+    a.post:hover img,
+    a.post:focus-visible img,
+    .feed-cell:hover { transform: none; }
+    .web-shot .feed-cell:hover { transform: none; }
+    .feed-cell { transition: box-shadow 0.2s ease; }
+    .wizard-float { animation: none; }
+    .wizard:hover .spark { animation: none; }
+  }
+</style>
+</head>
+<body>
+<header class="site-header" id="top">
+  <a class="brand" href="#top">Sandra</a>
+  <nav aria-label="Main">
+    <ul>
+      <li><a href="#about">About me</a></li>
+      <li><a href="#cases">Cases</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a class="header-cta" href="mailto:sandratimura@gmail.com?subject=Hello%20Sandra">Get in touch</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="page">
+  <div class="hero">
+    <div class="hero-objects" aria-hidden="true"></div>
+    <h1>Sandra’s social media management portfolio</h1>
+  </div>
+
+  <div class="video" id="about">
+    <video src="videos/intro.mp4" poster="images/intro-poster.jpg?v=2" controls playsinline preload="metadata" aria-label="Intro video from Sandra"></video>
+  </div>
+
+  <section class="about" aria-labelledby="about-title">
+    <h2 id="about-title">About me</h2>
+    <p>Hi, I am Sandra. I manage social media and communities for brands, and a lot of what sits around them too.</p>
+    <p>I have built strategy, planned paid campaigns, filmed at wineries across Europe, run product shoots, designed a logo and packaging, written blogs, and set up automations that answer customers while I sleep. I have done it for a global wine app, a student housing company in Copenhagen, and a few start-ups that were brand new when I joined.</p>
+    <p>I care about two things: that it looks good, and that it works. This page shows both.</p>
+  </section>
+
+  <section class="work" id="cases" aria-labelledby="work-title">
+    <h2 id="work-title">Work</h2>
+    <ul class="grid" id="grid"></ul>
+  </section>
+
+  <!-- Envelope holding the CV. The first page preview sits exactly on the card and is cut to the
+       envelope flaps, so the front of the envelope stays in front. To update the CV, replace
+       cv/sandra-timura-cv.pdf and images/cv-preview.jpg (a picture of the first page). -->
+  <section class="cv" aria-labelledby="cv-title">
+    <div class="cv-label">
+      <h2 id="cv-title">Check my CV</h2>
+      <svg class="cv-arrow" viewBox="0 0 160 90" aria-hidden="true">
+        <path d="M8 10 C40 70 100 80 150 50"/>
+        <path d="M138 50.6 L150 50 L143.8 60.3"/>
+      </svg>
+    </div>
+    <a class="envelope-wrap" href="cv/sandra-timura-cv.pdf" target="_blank" rel="noopener">
+      <img class="envelope" src="images/envelope.webp" width="593" height="660" alt="" loading="lazy">
+      <span class="envelope-cv"><img src="images/cv-preview.jpg" alt="" loading="lazy"></span>
+      <span class="sr-only">Open Sandra Timura's CV as a PDF (opens in a new tab)</span>
+    </a>
+  </section>
+
+  <footer class="site-footer" id="contact">
+    <div class="footer-top">
+      <p class="footer-title">Let us work together</p>
+      <a class="footer-email" href="mailto:sandratimura@gmail.com?subject=Hello%20Sandra">sandratimura@gmail.com</a>
+    </div>
+    <div class="footer-grid">
+      <div>
+        <p class="footer-label">Contact</p>
+        <ul>
+          <li><a href="mailto:sandratimura@gmail.com?subject=Hello%20Sandra">Email me</a></li>
+          <li><a href="https://www.linkedin.com/in/sandra-timura-marekting-specialist/" target="_blank" rel="noopener">LinkedIn<span class="sr-only"> (opens in a new tab)</span></a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-label">Menu</p>
+        <ul>
+          <li><a href="#about">About me</a></li>
+          <li><a href="#cases">Cases</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-label">Services</p>
+        <ul>
+          <li>Social media strategy</li>
+          <li>Social media management</li>
+          <li>Community building</li>
+          <li>Project management</li>
+          <li>Content production and UGC</li>
+          <li>Content writing</li>
+          <li>Communication and PR</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Sandra Timura</span>
+      <button class="to-top" type="button">Back to top</button>
+    </div>
+  </footer>
+</main>
+
+<dialog id="case" aria-labelledby="case-title">
+  <div class="detail">
+    <div class="detail-inner" id="case-body"></div>
+  </div>
+</dialog>
+
+<script>
+  const cases = [
+    {
+      id: "vivino",
+      name: "Vivino",
+      resultsFirst: true,
+      zoomStats: true,
+      paid: {
+        title: "Paid ad creatives",
+        text: "Examples of the creatives I made for Vivino paid campaigns.",
+        ads: [
+          { src: "images/vivino-ad-black-friday.webp", alt: "Vivino Black Friday ad: a Chablis and a Bordeaux on a deep red background with a red Black Friday price burst" },
+          { src: "images/vivino-ad-billboard.webp", alt: "Vivino billboard ad on a red wall under a blue sky: Discover and buy the right wine every time" }
+        ]
+      },
+      tile: "Global organic social for the world’s largest wine app, with over 70 million users",
+      image: { src: "images/vivino.jpg", alt: "Red wine being poured into a tasting glass on a wooden table, next to a black spittoon" },
+      headline: "80,000 new followers. Not a single one paid for.",
+      brief: "When I joined Vivino, the social channels were not going anywhere. Posts were not reaching people, not building trust and not driving anyone back to the app. For a brand with millions of wine lovers, social was barely part of the conversation.",
+      did: "I built a strategy from the ground up. I set a consistent visual identity, so every post looked like Vivino at a glance. And I introduced clear content pillars, with a defined job for every post: build community, grow brand awareness and trust, or drive traffic to the app and web. Vivino’s audience knows its wine, so the content had to earn credibility. It had to be accurate, useful and worth saving, not just pretty to scroll past. No post went out without a purpose, and every purpose had a metric.",
+      results: [
+        { value: "60%+", label: "year-over-year channel growth" },
+        { value: "80,000+", label: "new followers" },
+        { value: "81x", label: "more people reached than before I joined" }
+      ],
+      resultsNote: "All achieved without a branding budget",
+      role: "My role: Social Media Specialist. Strategy, content production, visual identity, community management and performance tracking.",
+      growth: {
+        periods: ["Feb 2024 to May 2025", "Jun 2025 to Sep 2026"],
+        sub: "Feb 2024 to May 2025 compared with Jun 2025 to Sep 2026, 16 months each",
+        wizard: true,
+        metrics: [
+          { label: "Reach", values: [108600, 8800000] },
+          { label: "Impressions", values: [3900000, 22300000] }
+        ],
+        ticks: [0, 5000000, 10000000, 15000000, 20000000, 25000000]
+      },
+      platforms: ["Instagram", "Facebook", "Pinterest", "Threads", "X"],
+      sideProjects: [{
+        title: "Email design",
+        videos: [
+          { src: "videos/vivino-email-1.mp4", label: "Email design example 1" },
+          { src: "videos/vivino-email-2.mp4", label: "Email design example 2" },
+          { src: "videos/vivino-email-3.mp4", label: "Email design example 3" }
+        ]
+      }],
+      feed: {
+        src: "images/vivino-feed-mockup.webp",
+        alt: "The Vivino Instagram feed on a phone, showing a grid of twelve posts",
+        width: 991,
+        height: 2000,
+        // Pixel edges of the feed posts inside the mockup image
+        cols: [[54, 345], [347, 642], [644, 935]],
+        rows: [[392, 784], [787, 1178], [1181, 1574], [1576, 1953]]
+      },
+      gallery: [
+        { src: "images/vivino-post-grapes.webp", href: "https://www.instagram.com/p/DdX2EOKF7Zx/", alt: "Vivino post on a burgundy background: If grapes can become wine, you can become anything.", metrics: { likes: "2,113", comments: "21", reposts: "245", shares: "859" } },
+        { src: "images/vivino-post-building.webp", href: "https://www.instagram.com/p/DecG2ieFycE/", alt: "Vivino post: apartment building windows labelled with types of wine drinkers, such as Only drinks French reds", metrics: { likes: "1,064", comments: "25", reposts: "31", shares: "127" } },
+        { src: "images/vivino-post-taste.webp", href: "https://www.instagram.com/p/DWNofeNmeFk/?img_index=1", alt: "Vivino post: the tasting notes dark cherry, forest floor and leather, paired with Amarone, Barolo and Monastrell", metrics: { likes: "35K", comments: "95", reposts: "499", shares: "23.2K" } },
+        { src: "images/vivino-post-coffee.webp", href: "https://www.instagram.com/p/Dd75Pm4F83-/?img_index=1", alt: "Vivino post: if this is your coffee choice, a straight espresso, you will love these wines, Barolo and Cabernet Sauvignon", metrics: { likes: "4,377", comments: "38", reposts: "152", shares: "2,238" } },
+        { src: "images/vivino-post-side-hustle.webp", href: "https://www.instagram.com/p/DcjLFCxDSp2/", alt: "Vivino post: a person holding a glass of rosé, with a quote about side hustles and tasting wines over the photo", metrics: { likes: "4,555", comments: "49", reposts: "337", shares: "3,147" } },
+        { src: "images/vivino-post-favourite-wine.webp", href: "https://www.instagram.com/p/DdiKUbRjfiG/?img_index=1", alt: "Vivino post: a hand holding a glass of red wine with the text What your favorite wine says about you", metrics: { likes: "859", comments: "17", reposts: "29", shares: "298" } }
+      ]
+    },
+    {
+      id: "soren-bjorngaard",
+      name: "Søren Bjørngaard",
+      tile: "Brand launch for a Copenhagen supplement start-up",
+      image: { src: "images/soren-bjorngaard.jpg", alt: "Motion-blurred close-up of a green product in soft light" },
+      cover: { src: "images/soren-cover.jpg", alt: "Close-up of a glossy green paste spread across a mesh surface" },
+      packaging: { src: "images/soren-packaging.webp", alt: "The GREEN 11 tin in black with white type, shown next to its flat label with ingredients, nutrition table and the EU organic logo", width: 1558, height: 1224, face: true },
+      feedSolo: {
+        src: "images/soren-feed-mockup.webp",
+        alt: "The sorenbjorngaard Instagram feed on a phone, showing a grid of twelve green and black posts about GREEN 11 and its superfoods",
+        width: 975,
+        height: 2000,
+        // Pixel edges of the feed posts inside the mockup image
+        cols: [[52, 340], [342, 640], [642, 932]],
+        rows: [[364, 762], [764, 1160], [1163, 1559], [1562, 1953]]
+      },
+      paid: {
+        title: "Paid content examples",
+        text: "Ads for the initial launch campaign.",
+        ads: [
+          { src: "images/soren-ad-story.webp", alt: "Sponsored Instagram story ad for GREEN 11 with superfood ingredients around the tin, a 20% first order discount and a Shop now link" },
+          { src: "images/soren-ad-feed.webp", alt: "Sponsored Facebook feed ad for GREEN 11 with a five star customer quote, green powder and a 20% first order discount" }
+        ]
+      },
+      launch: {
+        title: "Social media launch content examples",
+        text: "The launch content had to communicate a calm, healthy lifestyle: a slow pace, close to nature."
+      },
+      videos: [
+        { src: "videos/soren-green11-1.mp4", label: "GREEN11 product video 1" },
+        { src: "videos/soren-green11-2.mp4", label: "GREEN11 product video 2" },
+        { src: "videos/soren-green11-3.mp4", label: "GREEN11 product video 3" }
+      ],
+      carousels: [
+        [
+          { src: "images/soren-moringa-title.jpg", alt: "Superfood Spotlight post: Moringa, Moringa oleifera, with green moringa leaves" },
+          { src: "images/soren-moringa-info.jpg", alt: "Second slide: the origin, processing and benefits of moringa" }
+        ],
+        [
+          { src: "images/soren-camu-title.jpg", alt: "Superfood Spotlight post: Camu Camu, Myrciaria dubia, with red camu camu berries" },
+          { src: "images/soren-camu-info.jpg", alt: "Second slide: the origin, processing and benefits of camu camu" }
+        ]
+      ],
+      loops: [
+        { src: "videos/soren-step-1-scoop.mp4", label: "A scoop of green powder held over an empty glass" },
+        { src: "videos/soren-step-2-pour.mp4", label: "Water poured from a jug onto the powder in the glass" },
+        { src: "videos/soren-step-3-stir.mp4", label: "A spoon stirring the green drink in the glass" }
+      ],
+      brief: "Søren Bjørngaard is a supplement start-up from Copenhagen that needed a brand and a social presence ready for launch day.",
+      did: "I designed the logo and the packaging, planned and built the launch feed, and produced the content that introduced the brand to its first audience."
+    },
+    {
+      id: "canvas-student",
+      name: "Canvas Student",
+      zoomStats: true,
+      tile: "Always-on organic social for student residences in Copenhagen",
+      image: { src: "images/canvas-student.jpg", alt: "Curved wooden facade of a student residence courtyard with balconies, under a soft blue sky" },
+      cover: { src: "images/canvas-cover.jpg", alt: "Residents sharing drinks around a long table on a green rooftop terrace, with the Copenhagen skyline at sunset behind them", position: "50% 54%" },
+      reels: [
+        { src: "videos/canvas-dream-studio.mp4", label: "Reel: Student housing I dreamt of, a tour of an empty studio with tall windows", metrics: { views: "125K", likes: "3,920", comments: "6", reposts: "23", shares: "923" } },
+        { src: "videos/canvas-own-terrace.mp4", label: "Reel: entering your studio for the first time and finding your own terrace with a city view", metrics: { views: "24.5K", likes: "1,301", comments: "5", reposts: "11", shares: "89" } },
+        { src: "videos/canvas-fall-copenhagen.mp4", label: "Reel: studying in Copenhagen in the fall, at the Canvas Student Frederiksberg study area", metrics: { views: "5.8K", likes: "190", comments: "2", reposts: "6", shares: "47" } }
+      ],
+      brief: "Canvas Student offers student housing in Frederiksberg, Nordhavn and Amager. The goal is a feed that shows real life in the buildings and makes students want to live there.",
+      did: "I manage organic Instagram and Facebook with three posts a week, and community building sits at the heart of all of it. I plan and run content shoots with residents, so the feed is made by the community and for the community. I also create paid social videos for local campaigns. The community building paid off: followers grew by 181%, from 350 to 985, impressions grew 10 times, from 27,530 to 285,969, and reach grew 46 times, from 2,652 to 120,674. I report on results to the client regularly and plan upcoming content together with their marketing agency, always with community building as the goal.",
+      growth: {
+        periods: ["When I started", "Now"],
+        sub: "Reach and impressions when I started compared with now",
+        wizard: "hearts",
+        metrics: [
+          { label: "Reach", values: [2652, 120674] },
+          { label: "Impressions", values: [27530, 285969] }
+        ],
+        ticks: [0, 100000, 200000, 300000]
+      },
+      results: [
+        { value: "+181%", label: "more followers" },
+        { value: "10x", label: "more impressions" },
+        { value: "46x", label: "more people reached" }
+      ],
+      feed: {
+        src: "images/canvas-feed-mockup.webp",
+        alt: "The canvas_denmark Instagram feed on a phone, showing a grid of twelve posts of residences, residents and Copenhagen",
+        width: 985,
+        height: 2000,
+        // Pixel edges of the feed posts inside the mockup image
+        cols: [[42, 332], [334, 628], [630, 921]],
+        rows: [[391, 782], [784, 1175], [1178, 1569], [1571, 1954]]
+      },
+      libraryReels: [
+        { src: "videos/canvas-not-lonely.mp4", label: "Reel: It does not have to be lonely at all, about making friends when starting somewhere new" },
+        { src: "videos/canvas-shoebox.mp4", label: "Reel: a shoebox sized apartment with grey walls compared with a Canvas Student studio" },
+        { src: "videos/canvas-nordhavn-area.mp4", label: "Reel: getting to know the Nordhavn area around the Canvas Student studios" }
+      ],
+      library: [
+        { src: "images/canvas-lib-flowers.webp", alt: "Post: Flowers for all of our residents who just started their university, with a bouquet on a peach background" },
+        { src: "images/canvas-lib-coffee.webp", alt: "Post: Spots to know about when living in Canvas Amager, over a coffee machine covered in stickers" },
+        { src: "images/canvas-lib-braids.jpg", alt: "Two residents with braided hair sitting side by side at a desk in a studio" },
+        { src: "images/canvas-lib-rooftop.jpg", alt: "Two residents toasting with spritz glasses on the rooftop terrace at sunset" }
+      ]
+    },
+    {
+      id: "mothery",
+      name: "Mothery",
+      faceResults: { src: "images/sandra-face.png", kind: "pacifier" },
+      tile: "Content and photography for an e-commerce brand for mothers",
+      image: { src: "images/mothery.jpg", alt: "Close-up of a pregnant person lying on white sheets with a hand resting on their belly", position: "50% 45%" },
+      cover: { src: "images/mothery-cover.png", alt: "Mothery brand board: the Mothery logo over a close-up of a body in soft pink underwear, with five colour swatches from deep brown to blush pink", ratio: "890 / 640", plain: true },
+      headline: "Selling to the most sleep-deprived audience on the internet.",
+      brief: "Mothery is an e-commerce brand for mothers, before and after birth, with products for both mother and baby. Its customers are pregnant, recovering or running on three hours of sleep. They do not have time to decode a product page, and they will not trust a brand that does not understand what they are going through.",
+      did: [
+        "I led the photoshoots from planning to final frame, and handled the product photography and editing for the web shop myself. The goal was simple: every product should look as good on screen as it feels in real life, so a tired mother scrolling at 3 am could understand it, trust it and buy it without a second thought.",
+        "But a shop alone does not build trust. So I built Mothery’s blog from scratch and wrote the articles myself, turning the brand into a place mothers could come for honest, useful advice, not just a checkout page. The blog gave the brand a voice, gave customers a reason to return, and gave every product a story to sit inside."
+      ],
+      results: [
+        { value: "65", label: "product images" },
+        { value: "40", label: "blog articles" }
+      ],
+      resultsRow: true,
+      glitter: true,
+      blog: {
+        text: "I wrote the blog posts and articles for the Mothery website, on honest and practical topics such as the menstrual cycle, sexual health and everyday care, in a voice that felt warm and open.",
+        shot: { src: "images/mothery-blog.webp", alt: "The Mothery blog page in Slovak, with articles about the menstrual cycle, orgasms and tampons next to bold photos of pomegranate, skin and the sea", width: 1562, height: 1522,
+          cells: [[1147, 108, 1520, 495], [1147, 495, 1520, 882], [1147, 882, 1520, 1269], [1147, 1269, 1520, 1522]] }
+      },
+      web: [
+        { src: "images/mothery-web-home.webp", alt: "The Mothery website home page in Slovak, with a mother and baby hero photo and a grid of SoKind and o'gaenics products", width: 1562, height: 1522,
+          // Pixel edges of the hero and each product picture inside the screenshot
+          cells: [[38, 108, 1534, 881], [411, 881, 786, 1268], [786, 881, 1160, 1268], [1160, 881, 1534, 1268], [38, 1268, 411, 1522], [411, 1268, 786, 1522], [786, 1268, 1160, 1522], [1160, 1268, 1534, 1522]] },
+        { src: "images/mothery-web-products.webp", alt: "The Mothery all products page, a grid of product photos on soft pastel backgrounds", width: 1562, height: 1522,
+          cells: [[786, 108, 1160, 494], [1160, 108, 1534, 494], [786, 494, 1160, 881], [1160, 494, 1534, 881], [38, 881, 411, 1268], [411, 881, 786, 1268], [786, 881, 1160, 1268], [1160, 881, 1534, 1268], [38, 1268, 411, 1522], [411, 1268, 786, 1522], [786, 1268, 1160, 1522], [1160, 1268, 1534, 1522]] }
+      ],
+      libraryTop: [
+        { src: "images/mothery-sokind-masks.jpg", alt: "Product photo: a fan of pale blue SoKind Blissful Moment belly sheet mask sachets on a white background" },
+        { src: "images/mothery-sokind-belly.webp", alt: "A pregnant woman taking a mirror selfie wearing a belly sheet mask, in a linen shirt and cream set" },
+        { src: "images/mothery-sokind-open.jpg", alt: "Product photo: an opened SoKind sachet with the white sheet mask peeking out" }
+      ],
+      library: [
+        { src: "images/mothery-product-vitamin-d.jpg", alt: "Product photo: o'gaenics Hello Sunshine vitamin D box in gold, in front of a reishi mushroom on a cream background" },
+        { src: "images/mothery-product-kelp.webp", alt: "Product photo: o'gaenics Help From Kelp iodine box in green, in front of kelp on a mint background" },
+        { src: "images/mothery-product-blood.webp", alt: "Product photo: o'gaenics Feed Your Blood box in red, in front of beetroot slices on a pink background" },
+        { src: "images/mothery-product-immunity.jpg", alt: "Product photo: o'gaenics Body Guard immunity box in yellow, in front of a maitake mushroom on a pale yellow background" }
+      ]
+    },
+    {
+      id: "europe-content",
+      name: "Europe-wide content project",
+      tile: "On-location content production in vineyards across Europe",
+      image: { src: "images/europe-content.jpg", alt: "A person with long hair seen from behind on a balcony, looking out over misty vineyard hills" },
+      cover: { src: "images/europe-cover.jpg", alt: "An open suitcase seen from above, neatly packed with linen clothes, loafers, a drawstring bag and travel toiletries", ratio: "4 / 3" },
+      reels: [
+        { src: "videos/europe-guess-the-region.mp4", label: "Reel: Vivino is traveling, guess the region, over vineyards at sunset" },
+        { src: "videos/europe-views-maryamado.mp4", label: "Reel: views at Tenuta Maryamado, a pergola path between the vines" },
+        { src: "videos/europe-somewhere-in-italy.mp4", label: "Reel: somewhere in Italy, a woman on a terrace looking out over misty hills" },
+        { src: "videos/europe-belvedere-maryamado.mp4", label: "Reel: the Belvedere at Tenuta Maryamado, a glass of chilled rosé in a hanging chair under a tree" },
+        { src: "videos/europe-nicolas-feuillatte.mp4", label: "Reel: inside Nicolas Feuillatte, the steel tanks where one of France's favourite champagnes ferments" },
+        { src: "videos/europe-maryamado-tour.mp4", label: "Reel: a tour of Tenuta Maryamado in Tuscany, along a shaded path through the woods" }
+      ],
+      bts: [
+        { src: "images/europe-bts-1.jpg", alt: "A large bottle of Nicolas Feuillatte champagne displayed on a curved white wall" },
+        { src: "images/europe-bts-2.jpg", alt: "A woman on a terrace stretching, looking out over misty vineyard hills in Italy" },
+        { src: "images/europe-bts-3.jpg", alt: "A winemaker holding five bottles of his red and white wines in the sun" },
+        { src: "images/europe-bts-4.jpg", alt: "A tasting table with dark bottles, a spittoon and glasses of red wine" },
+        { src: "images/europe-bts-5.jpg", alt: "Rows of oak barrels stacked high in a winery cellar" },
+        { src: "images/europe-bts-6.jpg", alt: "The Tenuta Polvaro sign in front of white roses and a winery house" },
+        { src: "images/europe-bts-7.jpg", alt: "A winery with a red tiled roof behind rows of green vines under a blue sky" },
+        { src: "images/europe-bts-8.jpg", alt: "Two men seen from behind, looking out over rolling vineyard hills" },
+        { src: "images/europe-bts-9.jpg", alt: "A table set with three bottles and glasses of red wine in a chateau courtyard under the trees" },
+        { src: "images/europe-bts-10.jpg", alt: "A woman in a white linen suit walking out into a sunny winery courtyard" },
+        { src: "images/europe-bts-11.jpg", alt: "The front of Chateau Margui, a stone building with white doors and olive trees" },
+        { src: "images/europe-bts-12.jpg", alt: "A row of large Nicolas Feuillatte champagne bottles on display in the boutique" },
+        { src: "images/europe-bts-13.jpg", alt: "A woman in a white robe lying on the grass with a plant, shot from above" },
+        { src: "images/europe-bts-14.jpg", alt: "A close-up of a bottle of Nicolas Feuillatte Reserve Exclusive rose champagne" },
+        { src: "images/europe-bts-15.jpg", alt: "A man tending the vines in a sunny vineyard" },
+        { src: "images/europe-bts-16.jpg", alt: "A woman in a red dress holding a bottle in front of cypress trees at La Stella" },
+        { src: "images/europe-bts-17.jpg", alt: "A large round Nicolas Feuillatte sign hanging from the ceiling of the winery" },
+        { src: "images/europe-bts-18.jpg", alt: "A lunch table with plates of food and glasses of red wine, overlooking vineyard hills" },
+        { src: "videos/europe-bts-video.mp4", video: true, alt: "A short clip of a garden with tall trees and a statue at a winery" },
+        { src: "images/europe-bts-19.jpg", alt: "Three oak barrels stacked on a red floor in a winery" }
+      ],
+      brief: "Great content starts long before anyone picks up a camera. Vivino wanted authentic content from the people behind the wine: the vineyards, the cellars, the winemakers. That meant getting a content production into wineries across Europe, on schedule, with every contract signed and every partner on board.",
+      did: "I led the project end to end. I set up visits with Vivino’s winery partners, organised the meetings and content shoots, handled the contracts and arranged the travel. Along the way, I built relationships with the partners and kept internal stakeholders aligned at every step. When the camera rolled, everything else had already been taken care of.",
+      role: "My role: Project Lead. Partner relations, production planning, legal coordination, travel logistics and stakeholder management.",
+      results: [
+        { value: "16", label: "wineries" },
+        { value: "7", label: "regions" },
+        { value: "4", label: "countries" },
+        { value: "80", label: "pieces of content" }
+      ],
+      plane: true,
+      resultsRow: true
+    },
+    {
+      id: "ugc",
+      name: "UGC",
+      faceReels: { src: "images/soren-face.webp", kind: "camera" },
+      reelsAfter: true,
+      noResults: true,
+      tile: "User-generated content",
+      image: { src: "images/ugc.jpg", alt: "A woman in a blue and white top taking a selfie with an iced coffee at a sunny cafe table", position: "50% 68%" },
+      cover: { video: "videos/ugc-cover.mp4", alt: "Sandra on a terrace at golden hour, with an Italian hill town and misty mountains behind her" },
+      reels: [
+        { src: "videos/ugc-1.mp4", brand: "Exercere", label: "UGC video for Exercere: unboxing an Exercere order in a bright room with tall windows" },
+        { src: "videos/ugc-2.mp4", brand: "Exercere", label: "UGC video for Exercere: setting up a Mabo Everyone matcha set on the sofa" },
+        { src: "videos/ugc-3.mp4", brand: "Cult Beauty", label: "UGC video for Cult Beauty: showing the Maison Margiela By the Fireplace perfume" },
+        { src: "videos/ugc-4.mp4", brand: "Gisou", label: "UGC video for Gisou: unboxing a Gisou hair care box" },
+        { src: "videos/ugc-5.mp4", brand: "Gina Tricot", label: "UGC video for Gina Tricot: a new loungewear unboxing with a yellow knit cardigan" },
+        { src: "videos/ugc-6.mp4", brand: "Vivino", label: "UGC video for Vivino: talking through an app while showing it on a phone" }
+      ],
+      headline: "The best ads do not look like ads.",
+      brief: "People scroll past brands. They stop for people. That is why user-generated content works: it feels less like a pitch and more like a recommendation from someone you trust. I produce and edit UGC videos for brands including Gisou, Cult Beauty, Gina Tricot and Exercere.",
+      did: "Every brand came with its own voice, audience and expectations, and the content had to fit right in. I planned, filmed and edited each video myself, built for how people actually watch: a hook in the first seconds, a clear story and a reason to keep watching until the end. The result is content that feels native to the feed, while still doing the job the brand needs it to do."
+    }
+  ];
+
+  // Title letters magnify around the cursor (mouse devices only)
+  const canHover = matchMedia("(hover: hover) and (pointer: fine)").matches;
+  const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  // Glitter that trails the cursor over the product photos
+  if (canHover && !reduceMotion) {
+    const glitterColours = ["#ffe9a8", "#ffffff", "#ffc9d9"];
+    let lastGlitter = 0;
+    document.addEventListener("pointermove", e => {
+      if (!e.target.closest || !e.target.closest(".glitter-zone .library-item")) return;
+      const now = performance.now();
+      if (now - lastGlitter < 35) return;
+      lastGlitter = now;
+      for (let i = 0; i < 2; i++) {
+        const g = document.createElement("span");
+        const size = 3 + Math.random() * 5;
+        g.className = "glitter";
+        g.style.cssText = `left:${e.clientX}px;top:${e.clientY}px;width:${size}px;height:${size}px;` +
+          `background:${glitterColours[Math.floor(Math.random() * glitterColours.length)]};` +
+          `--gx:${(Math.random() - 0.5) * 40}px;--gy:${10 + Math.random() * 35}px`;
+        g.setAttribute("aria-hidden", "true");
+        // Inside the open case dialog, so it shows above the page
+        (e.target.closest("dialog") || document.body).appendChild(g);
+        g.addEventListener("animationend", () => g.remove());
+      }
+    });
+  }
+
+  function magnify(title) {
+    if (!title || !canHover || reduceMotion) return;
+    const text = title.textContent;
+    title.classList.add("magnify");
+    title.innerHTML = `<span class="sr-only">${text}</span><span aria-hidden="true">` +
+      text.split(" ").map(w => `<span class="word">${[...w].map(ch => `<span class="char">${ch}</span>`).join("")}</span>`).join(" ") +
+      `</span>`;
+    const chars = [...title.querySelectorAll(".char")];
+    const scales = chars.map(() => 1);
+    const maxZoom = 0.8; // the letter under the cursor grows by up to 80%
+    let centres = [];
+    let pointer = null;
+    let frame = 0;
+
+    // Letter centres relative to the title; scaling from the centre keeps them fixed
+    function measure() {
+      const box = title.getBoundingClientRect();
+      centres = chars.map(c => {
+        const r = c.getBoundingClientRect();
+        return [r.left - box.left + r.width / 2, r.top - box.top + r.height / 2];
+      });
+    }
+
+    function tick() {
+      const spread = parseFloat(getComputedStyle(title).fontSize) * 0.7;
+      let moving = false;
+      chars.forEach((c, i) => {
+        let target = 1;
+        if (pointer) {
+          const dx = pointer[0] - centres[i][0];
+          const dy = pointer[1] - centres[i][1];
+          target = 1 + maxZoom * Math.exp(-(dx * dx + dy * dy) / (2 * spread * spread));
+        }
+        // Ease towards the target each frame for a smooth, springy follow
+        scales[i] += (target - scales[i]) * 0.12;
+        if (Math.abs(target - scales[i]) > 0.0005) moving = true;
+        else scales[i] = target;
+        c.style.transform = scales[i] - 1 < 0.0008 ? "" : `scale(${scales[i].toFixed(4)})`;
+      });
+      frame = moving ? requestAnimationFrame(tick) : 0;
+    }
+    function start() { if (!frame) frame = requestAnimationFrame(tick); }
+
+    title.addEventListener("pointerenter", measure);
+    title.addEventListener("pointermove", e => {
+      // The cursor can already be over the title when the page opens, before any pointerenter
+      if (centres.length !== chars.length) measure();
+      const box = title.getBoundingClientRect();
+      pointer = [e.clientX - box.left, e.clientY - box.top];
+      start();
+    });
+    title.addEventListener("pointerleave", () => { pointer = null; start(); });
+  }
+  magnify(document.querySelector("h1"));
+  // Home page: playful objects burst out wherever the cursor moves on the first screen, over the title too
+  const hero = document.querySelector(".hero");
+  if (hero && canHover && !reduceMotion) {
+    const heroLayer = hero.querySelector(".hero-objects");
+    const heroImages = ["deco-star-dots", "deco-heart-button", "deco-chrome-flower", "deco-denim-flower", "deco-pocket", "deco-red-star"]
+      .map(name => `images/${name}.webp`);
+    heroImages.forEach(src => { new Image().src = src; });
+    let lastObject = 0;
+    document.addEventListener("pointermove", e => {
+      const area = heroLayer.getBoundingClientRect();
+      if (e.clientY < area.top || e.clientY > area.bottom) return;
+      const now = performance.now();
+      if (now - lastObject < 30) return;
+      lastObject = now;
+      const box = area;
+      const img = document.createElement("img");
+      const size = 60 + Math.random() * 80;
+      const angle = Math.random() * Math.PI * 2;
+      const dist = 20 + Math.random() * 60;
+      img.className = "hero-object";
+      img.src = heroImages[Math.floor(Math.random() * heroImages.length)];
+      img.alt = "";
+      img.style.cssText = `left:${e.clientX - box.left}px;top:${e.clientY - box.top}px;--w:${size.toFixed(0)}px;` +
+        `--r:${(Math.random() * 70 - 35).toFixed(0)}deg;--dx:${(Math.cos(angle) * dist).toFixed(0)}px;--dy:${(Math.sin(angle) * dist).toFixed(0)}px`;
+      img.addEventListener("animationend", () => img.remove());
+      heroLayer.appendChild(img);
+      // Keep it dense but light: at most 70 on screen
+      while (heroLayer.childElementCount > 70) heroLayer.firstElementChild.remove();
+    });
+  }
+
+
+  const grid = document.getElementById("grid");
+  const dialog = document.getElementById("case");
+  // The page footer, reused at the end of every case page
+  const footerHtml = document.getElementById("contact").innerHTML;
+  const body = document.getElementById("case-body");
+
+  grid.innerHTML = cases.map(c => `
+    <li>
+      <a class="case-link" href="#${c.id}">
+        ${c.image
+          ? `<div class="tile has-image"><img src="${c.image.src}" alt="${c.image.alt}" style="object-position: ${c.image.position || "50% 50%"}"></div>`
+          : `<div class="tile">${c.tile}</div>`}
+        <span class="case-name">${c.name}</span>
+      </a>
+    </li>`).join("");
+
+  // Instagram-style engagement row under a post
+  const metricIcons = {
+    views: '<path d="M1.5 12s3.8-7 10.5-7 10.5 7 10.5 7-3.8 7-10.5 7S1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3"/>',
+    likes: '<path d="M12 20.5s-7.5-4.6-9.5-9.4C1.2 7.8 3.4 4.5 6.8 4.5c2 0 3.6 1.1 5.2 3 1.6-1.9 3.2-3 5.2-3 3.4 0 5.6 3.3 4.3 6.6-2 4.8-9.5 9.4-9.5 9.4z"/>',
+    comments: '<path d="M20.5 11.5a8.5 8.5 0 0 1-12.6 7.4l-4.4 1.6 1.6-4.3a8.5 8.5 0 1 1 15.4-4.7z"/>',
+    reposts: '<path d="M17 2.5 20.5 6 17 9.5"/><path d="M3.5 11V9.5A3.5 3.5 0 0 1 7 6h13.5"/><path d="M7 21.5 3.5 18 7 14.5"/><path d="M20.5 13v1.5A3.5 3.5 0 0 1 17 18H3.5"/>',
+    shares: '<path d="M21.5 2.5 10.5 13.5"/><path d="M21.5 2.5l-7 19-4-8-8-4z"/>'
+  };
+  function postMetrics(m) {
+    return `<ul class="post-metrics">${Object.keys(metricIcons).filter(k => m[k] != null).map(k =>
+      `<li><svg viewBox="0 0 24 24" aria-hidden="true">${metricIcons[k]}</svg>${m[k]}<span class="sr-only"> ${k}</span></li>`
+    ).join("")}</ul>`;
+  }
+
+  // Floating face with a laptop. Small green balls burst out of the laptop on hover.
+  function techie() {
+    const balls = Array.from({ length: 16 }, (_, i) => {
+      const angle = (i * 22.5 + (i % 3) * 7) * Math.PI / 180;
+      const dist = 34 + (i * 17) % 40;
+      return `<span class="ball" style="--dx:${(Math.cos(angle) * dist).toFixed(1)}px;--dy:${(Math.sin(angle) * dist).toFixed(1)}px;--d:${(i * 0.06).toFixed(2)}s;--s:${4 + (i % 4) * 1.5}px"></span>`;
+    }).join("");
+    return `
+      <div class="techie" aria-hidden="true">
+        <div class="techie-float">
+          <img src="images/soren-face.webp" alt="">
+          <div class="laptop"><img src="images/soren-laptop.webp" alt="">${balls}</div>
+        </div>
+      </div>`;
+  }
+
+  // Floating plane with Sandra riding on top. Small cameras fly out on hover.
+  function flyer() {
+    const cams = Array.from({ length: 12 }, (_, i) => {
+      const angle = (i * 30 + (i % 3) * 9) * Math.PI / 180;
+      const dist = 40 + (i * 19) % 45;
+      return `<span class="cam" style="--dx:${(Math.cos(angle) * dist).toFixed(1)}px;--dy:${(Math.sin(angle) * dist).toFixed(1)}px;--d:${(i * 0.08).toFixed(2)}s;--s:${14 + (i % 3) * 4}px"></span>`;
+    }).join("");
+    return `
+      <div class="flyer" aria-hidden="true">
+        <div class="flyer-float">
+          <img class="flyer-plane" src="images/europe-plane.webp" alt="">
+          <img class="flyer-face" src="images/sandra-face.png" alt="">
+          ${cams}
+        </div>
+      </div>`;
+  }
+
+  // Grouped bar chart comparing two periods, one shared axis
+  function growthChart(g) {
+    const max = g.ticks[g.ticks.length - 1];
+    const short = n => n < 1e6 ? `${+(n / 1e3).toFixed(1)}K` : `${+(n / 1e6).toFixed(1)}M`;
+    const grid = g.ticks.map(t =>
+      `<div class="growth-tick" style="bottom:${t / max * 100}%"><span>${t ? short(t) : "0"}</span></div>`).join("");
+    const groups = g.metrics.map(m => {
+      const ratio = m.values[1] / m.values[0];
+      // Very large jumps read better as a multiple than as a percentage
+      const change = ratio >= 10 ? `${Math.round(ratio)}x` : `+${Math.round((ratio - 1) * 100)}%`;
+      const bars = m.values.map((v, i) =>
+        `<div class="growth-bar bar-${i}" style="height:${v / max * 100}%"
+              data-tip="${m.label}, ${g.periods[i]}: ${short(v)}">
+           <span class="growth-value">${short(v)}</span>
+         </div>`).join("");
+      return `<div class="growth-group"><div class="growth-bars">${bars}</div>
+        <p class="growth-label">${m.label} <strong>${change}</strong></p></div>`;
+    }).join("");
+    const rows = g.metrics.map(m => `<tr><th scope="row">${m.label}</th>${m.values.map(v => `<td>${short(v)}</td>`).join("")}</tr>`).join("");
+    // Yellow sparks that fly out of the wand tip, spread towards the chart
+    const sparks = Array.from({ length: 14 }, (_, i) => {
+      const angle = (150 + i * 7.5 + (i % 3) * 4) * Math.PI / 180;
+      const dist = 26 + (i * 13) % 38;
+      return `<span class="spark" style="--dx:${(Math.cos(angle) * dist).toFixed(1)}px;--dy:${(Math.sin(angle) * dist).toFixed(1)}px;--d:${(i * 0.07).toFixed(2)}s;--s:${3 + (i % 4)}px"></span>`;
+    }).join("");
+    return `
+      <figure class="growth${g.wizard ? " has-wizard" : ""}">
+        ${g.wizard ? `<div class="wizard${g.wizard === "hearts" ? " hearts" : ""}" aria-hidden="true">
+          <div class="wizard-float">
+            <img src="images/sandra-face.png" alt="">
+            <div class="wand">
+              <svg viewBox="0 0 100 100">
+                <line x1="94" y1="80" x2="20" y2="42" class="wand-stick"/>
+                <line x1="30" y1="47.2" x2="20" y2="42" class="wand-tip"/>
+                <path d="M12 26l2.6 7.4 7.4 2.6-7.4 2.6L12 46l-2.6-7.4L2 36l7.4-2.6z" class="wand-star"/>
+              </svg>
+              ${sparks}
+            </div>
+          </div>
+        </div>` : ""}
+        <h3 class="section-title">Growth in numbers</h3>
+        <p class="growth-sub">${g.sub}</p>
+        <ul class="growth-legend" aria-hidden="true">
+          ${g.periods.map((p, i) => `<li><span class="swatch bar-${i}"></span>${p}</li>`).join("")}
+        </ul>
+        <div class="growth-plot" aria-hidden="true">${grid}<div class="growth-groups">${groups}</div></div>
+        <div class="sr-only"><table>
+          <caption>Reach and impressions by period</caption>
+          <tr><th scope="col">Metric</th>${g.periods.map(p => `<th scope="col">${p}</th>`).join("")}</tr>
+          ${rows}
+        </table></div>
+      </figure>`;
+  }
+
+  // Phone mockup of a feed. Each post gets its own layer, cut from the same image,
+  // so it can lift out of the phone on hover.
+  // Copies of single pictures inside a screenshot, so each can lift out on hover
+  function zoomCells(s) {
+    const pct = (a, b) => `${(a / b * 100).toFixed(3)}%`;
+    return `<div class="feed-cells" aria-hidden="true">${s.cells.map(([x0, y0, x1, y1]) => {
+      const w = x1 - x0, h = y1 - y0;
+      return `<span class="feed-cell" style="left:${pct(x0, s.width)};top:${pct(y0, s.height)};width:${pct(w, s.width)};height:${pct(h, s.height)}">` +
+        `<img src="${s.src}" alt="" style="width:${pct(s.width, w)};left:${pct(-x0, w)};top:${pct(-y0, h)}"></span>`;
+    }).join("")}</div>`;
+  }
+
+  function feedMockup(f) {
+    const pct = (a, b) => `${(a / b * 100).toFixed(3)}%`;
+    const cells = f.rows.flatMap(([y0, y1]) => f.cols.map(([x0, x1]) => {
+      const w = x1 - x0, h = y1 - y0;
+      return `<span class="feed-cell" style="left:${pct(x0, f.width)};top:${pct(y0, f.height)};width:${pct(w, f.width)};height:${pct(h, f.height)}">` +
+        `<img src="${f.src}" alt="" style="width:${pct(f.width, w)};left:${pct(-x0, w)};top:${pct(-y0, h)}"></span>`;
+    })).join("");
+    return `<figure class="feed-mockup"><img src="${f.src}" alt="${f.alt}"><div class="feed-cells" aria-hidden="true">${cells}</div></figure>`;
+  }
+
+  // Instagram posts with metrics, under a "Content examples" title
+  function galleryBlock(c, extra) {
+    if (!c.gallery) return "";
+    return `<h3 class="section-title gallery-title${extra}">Content examples</h3>
+           <div class="gallery has-posts">${c.gallery.map(g => {
+             const img = `<img src="${g.src}" alt="${g.alt}" loading="lazy">`;
+             const post = g.href
+               ? `<a class="post" href="${g.href}" target="_blank" rel="noopener">${img}<span class="sr-only"> (opens on Instagram)</span></a>`
+               : `<div class="post">${img}</div>`;
+             return `<div class="post-item">${post}${g.metrics ? postMetrics(g.metrics) : ""}</div>`;
+           }).join("")}</div>`;
+  }
+
+  // Results numbers (or packaging), with the phone mockup when a case has one
+  function resultsBlock(c) {
+    return c.packaging ? `
+      <figure class="packaging"><img src="${c.packaging.src}" alt="${c.packaging.alt}" width="${c.packaging.width}" height="${c.packaging.height}" loading="lazy">${c.packaging.face ? techie() : ""}</figure>` : `
+      <div class="results${c.feed ? " has-feed" : ""}${c.plane ? " has-plane" : ""}${c.faceResults ? " has-face" : ""}">${c.plane ? flyer() : ""}${c.faceResults ? faceBurst(c.faceResults) : ""}
+        <div>
+          ${c.results
+            ? `<ul class="stats${c.resultsRow ? " in-row" : ""}">${c.results.map(r => `<li><span class="stat-value">${r.value}</span><span class="stat-label">${r.label}</span></li>`).join("")}</ul>
+               ${c.resultsNote ? `<p class="results-note">${c.resultsNote}</p>` : ""}`
+            : `<h3>Results</h3><p class="placeholder-note">Add two or three key numbers here, for example follower growth, reach or engagement rate.</p>`}
+          ${c.role ? `<p class="role">${c.role}</p>` : ""}
+        </div>
+        ${c.feed ? feedMockup(c.feed) : ""}
+      </div>`;
+  }
+
+  // Floating face that sends small things flying on hover: pacifiers for Mothery, cameras for UGC
+  function faceBurst(f) {
+    const colours = f.kind === "pacifier" ? ["#f4a7b9", "#9ec9e8", "#a8dcc4"] : ["var(--ink)"];
+    const bits = Array.from({ length: 14 }, (_, i) => {
+      const angle = (200 + i * 12 + (i % 3) * 6) * Math.PI / 180;
+      const dist = 45 + (i * 23) % 50;
+      return `<span class="burst-bit ${f.kind}" style="--dx:${(Math.cos(angle) * dist).toFixed(1)}px;--dy:${(Math.sin(angle) * dist).toFixed(1)}px;` +
+        `--d:${(i * 0.07).toFixed(2)}s;--s:${16 + (i % 3) * 5}px;background:${colours[i % colours.length]}"></span>`;
+    }).join("");
+    return `<div class="burst-face" aria-hidden="true"><div class="burst-float"><img src="${f.src}" alt="">${bits}</div></div>`;
+  }
+
+  // Paid ad creatives side by side, under their own title
+  function paidBlock(c) {
+    return `
+      <section class="extra paid">
+        <h3 class="section-title">${c.paid.title}</h3>
+        <p>${c.paid.text}</p>
+        <div class="ads">${c.paid.ads.map(a => `<img src="${a.src}" alt="${a.alt}" loading="lazy">`).join("")}</div>
+      </section>`;
+  }
+
+  // Videos with optional brand names and metrics, under a "Content examples" title
+  function reelsBlock(c, extra) {
+    return `
+      <h3 class="section-title gallery-title${extra}">Content examples</h3>
+      <div class="gallery has-posts reels">${c.faceReels ? faceBurst(c.faceReels) : ""}${c.reels.map(r => `<div class="post-item"><video class="reel" src="${r.src}" aria-label="${r.label}" muted loop playsinline controls preload="metadata" ${reduceMotion ? "" : "autoplay"}></video>${r.brand ? `<p class="reel-brand">${r.brand}</p>` : ""}${r.metrics ? postMetrics(r.metrics) : ""}</div>`).join("")}</div>`;
+  }
+
+  // For each bar pair, draw a curved green arrow from above the earlier bar up to the top
+  // of the new bar, with the growth (46x, +472%) written beside it. Drawn in pixels so the
+  // arrowheads point along the curve, and redrawn when the chart changes size.
+  function growthArrows(root) {
+    const ns = "http://www.w3.org/2000/svg";
+    root.querySelectorAll(".growth-plot").forEach(plot => {
+      const draw = () => {
+        const box = plot.getBoundingClientRect();
+        if (!box.width || !box.height) return;
+        let svg = plot.querySelector(".growth-arrow");
+        if (!svg) {
+          svg = document.createElementNS(ns, "svg");
+          svg.setAttribute("class", "growth-arrow");
+          svg.setAttribute("aria-hidden", "true");
+          plot.appendChild(svg);
+        }
+        svg.setAttribute("viewBox", `0 0 ${box.width} ${box.height}`);
+        svg.innerHTML = "";
+        plot.querySelectorAll(".growth-group").forEach((group, i) => {
+          const before = group.querySelector(".bar-0").getBoundingClientRect();
+          const after = group.querySelector(".bar-1").getBoundingClientRect();
+          const label = group.querySelector(".growth-label strong");
+          const lift = Math.min(70, box.height * 0.22);
+          // Start above the earlier bar, end just left of the new bar's top
+          const s = [before.left - box.left - before.width * 0.15, Math.min(before.top - box.top - lift, after.bottom - box.top - lift)];
+          const e = [after.left - box.left - 8, after.top - box.top - 6];
+          const c = [e[0] - (e[0] - s[0]) * 0.15, s[1] - (s[1] - e[1]) * 0.15];
+          const ang = Math.atan2(e[1] - c[1], e[0] - c[0]);
+          const tip = (a, l) => `${(e[0] - Math.cos(ang + a) * l).toFixed(1)},${(e[1] - Math.sin(ang + a) * l).toFixed(1)}`;
+          const line = document.createElementNS(ns, "path");
+          line.setAttribute("class", "arrow-line");
+          line.setAttribute("d", `M${s} Q${c} ${e}`);
+          const head = document.createElementNS(ns, "path");
+          head.setAttribute("class", "arrow-head");
+          head.setAttribute("d", `M${tip(0.5, 13)} L${e} L${tip(-0.5, 13)}`);
+          const text = document.createElementNS(ns, "text");
+          text.setAttribute("class", "arrow-text");
+          text.setAttribute("text-anchor", "end");
+          // Beside the curve, up and to the left of its middle
+          text.setAttribute("x", ((s[0] + e[0]) / 2 - 10).toFixed(1));
+          text.setAttribute("y", ((s[1] + e[1]) / 2 - 8).toFixed(1));
+          text.textContent = label ? label.textContent : "";
+          [line, head, text].forEach(el => { el.style.setProperty("--delay", `${i * 0.2}s`); svg.appendChild(el); });
+          line.style.setProperty("--len", line.getTotalLength().toFixed(0));
+        });
+      };
+      draw();
+      new ResizeObserver(draw).observe(plot);
+      const io = new IntersectionObserver(entries => {
+        if (entries.some(en => en.isIntersecting)) { plot.classList.add("arrow-on"); io.disconnect(); }
+      }, { threshold: 0.5 });
+      io.observe(plot);
+    });
+  }
+
+  function render(c) {
+    const i = cases.indexOf(c);
+    const next = cases[(i + 1) % cases.length];
+    body.innerHTML = `
+      <a class="back" href="#cases"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12H5M11 6l-6 6 6 6"/></svg><span>Back to cases</span></a>
+      <h2 id="case-title" tabindex="-1">${c.name}</h2>
+      <p class="lede">${c.tile}</p>
+      ${c.cover
+        ? `<div class="detail-cover has-image"${c.cover.ratio ? ` style="aspect-ratio: ${c.cover.ratio}${c.cover.plain ? "; background: none" : ""}"` : ""}>${c.cover.video
+          ? `<video src="${c.cover.video}" aria-label="${c.cover.alt}" muted loop playsinline preload="auto" ${reduceMotion ? "controls" : "autoplay"}></video>`
+          : `<img src="${c.cover.src}?v=3" alt="${c.cover.alt}"${c.cover.position ? ` style="object-position: ${c.cover.position}"` : ""}>`}</div>`
+        : c.gallery ? "" : `<div class="detail-cover">Cover image</div>`}
+      ${c.reels && !c.reelsAfter ? reelsBlock(c, "") : ""}
+      ${c.resultsFirst ? resultsBlock(c) : galleryBlock(c, "")}
+      <div class="story">
+        <div><h3 class="section-title">${c.headline || "The brief"}</h3><p>${c.brief}</p></div>
+        <div><h3 class="section-title">What I did</h3>${[].concat(c.did).map(p => `<p>${p}</p>`).join("")}</div>
+      </div>
+      ${c.reels && c.reelsAfter ? reelsBlock(c, " after-story") : ""}
+      ${c.growth ? growthChart(c.growth) : ""}
+      ${c.resultsFirst ? galleryBlock(c, " after-story") : c.noResults ? "" : resultsBlock(c)}
+      ${c.platforms ? `
+      <section class="extra">
+        <h3 class="section-title">Platforms I managed</h3>
+        <ul class="platforms">${c.platforms.map(p => `<li>${p}</li>`).join("")}</ul>
+      </section>` : ""}
+      ${c.sideProjects ? `
+      <section class="extra">
+        <h3 class="section-title">Side projects</h3>
+        ${c.sideProjects.map(s => `
+          <h4 class="side-title">${s.title}</h4>
+          <div class="videos">${Array.isArray(s.videos)
+            ? s.videos.map(v => `<video class="side-video" src="${v.src}" aria-label="${v.label}" muted loop playsinline preload="metadata" ${reduceMotion ? "controls" : "autoplay"}></video>`).join("")
+            : Array.from({ length: s.videos }, () => `<div class="video-slot">Video coming soon</div>`).join("")}</div>`).join("")}
+      </section>` : ""}
+      ${c.launch ? `
+      <section class="extra launch">
+        <h3 class="section-title">${c.launch.title}</h3>
+        <p>${c.launch.text}</p>` : ""}
+      ${c.videos ? `
+      <div class="videos row">${c.videos.map(v => `<video class="side-video" src="${v.src}" aria-label="${v.label}" muted loop playsinline controls preload="metadata" ${reduceMotion ? "" : "autoplay"}></video>`).join("")}</div>`
+      : ""}
+      ${c.carousels ? `
+      <div class="slides pair">${c.carousels.map(slides => `<div class="slide-post">${slides.map(s => `<img src="${s.src}" alt="${s.alt}" loading="lazy">`).join("")}</div>`).join("")}</div>`
+      : ""}
+      ${c.loops ? `
+      <div class="loops">${c.loops.map(v => `<video src="${v.src}" aria-label="${v.label}" muted loop playsinline preload="metadata" ${reduceMotion ? "controls" : "autoplay"}></video>`).join("")}</div>`
+      : ""}
+      ${c.launch ? `</section>` : ""}
+      ${c.feedSolo ? `
+      <div class="extra feed-solo">${feedMockup(c.feedSolo)}</div>` : ""}
+      ${c.paid ? paidBlock(c) : ""}
+      ${c.bts ? `
+      <section class="extra">
+        <h3 class="section-title">BTS library</h3>
+        <div class="library bts">${c.bts.map(p => `<div class="library-item">${p.video
+          ? `<video src="${p.src}" aria-label="${p.alt}" muted loop playsinline preload="metadata" ${reduceMotion ? "controls" : "autoplay"}></video>`
+          : `<img src="${p.src}" alt="${p.alt}" loading="lazy">`}</div>`).join("")}</div>
+      </section>` : ""}
+      ${c.library ? `
+      <section class="extra${c.glitter ? " glitter-zone" : ""}">
+        ${c.libraryTop ? `<div class="library library-top">${c.libraryTop.map(p => `<div class="library-item"><img src="${p.src}" alt="${p.alt}" loading="lazy"></div>`).join("")}</div>` : ""}
+        ${c.libraryReels ? `<div class="gallery has-posts reels library-reels">${c.libraryReels.map(r => `<div class="post-item"><video class="reel" src="${r.src}" aria-label="${r.label}" muted loop playsinline controls preload="metadata" ${reduceMotion ? "" : "autoplay"}></video></div>`).join("")}</div>` : ""}
+        <div class="library">${c.library.map(p => `<div class="library-item"><img src="${p.src}" alt="${p.alt}" loading="lazy"></div>`).join("")}</div>
+      </section>` : ""}
+      ${c.web ? `
+      <section class="extra">
+        <h3 class="section-title">Web</h3>
+        <div class="web-shots">${c.web.map(w => `<div class="web-shot"><img src="${w.src}" alt="${w.alt}" loading="lazy">${w.cells ? zoomCells(w) : ""}</div>`).join("")}</div>
+      </section>` : ""}
+      ${c.blog ? `
+      <section class="extra">
+        <h3 class="section-title">Blog</h3>
+        <p>${c.blog.text}</p>
+        <div class="web-shot blog-shot"><img src="${c.blog.shot.src}" alt="${c.blog.shot.alt}" loading="lazy">${c.blog.shot.cells ? zoomCells(c.blog.shot) : ""}</div>
+      </section>` : ""}
+      ${c.videos || c.carousels || c.paid || c.gallery || c.reels || c.bts || c.library ? "" : `<div class="gallery"><div>Image</div><div>Image</div><div>Image</div><div>Image</div></div>`}
+      <div class="next"><a href="#${next.id}">Next case: ${next.name}</a></div>
+      <footer class="site-footer">${footerHtml}</footer>`;
+    body.querySelectorAll(".section-title, .results-note").forEach(magnify);
+    // On some cases the big result numbers zoom letter by letter too
+    if (c.zoomStats) body.querySelectorAll(".stat-value").forEach(magnify);
+    growthArrows(body);
+    dialog.querySelector(".detail").scrollTop = 0;
+  }
+
+  let lastLink = null;
+  function show() {
+    const id = location.hash.slice(1);
+    const c = cases.find(x => x.id === id);
+    if (c) {
+      render(c);
+      if (!dialog.open) dialog.showModal();
+      // Move focus into the case for keyboard and screen reader users; people go back with the browser
+      document.getElementById("case-title").focus({ preventScroll: true });
+    } else if (dialog.open) {
+      dialog.close();
+    }
+  }
+  function closeCase() {
+    if (dialog.open) dialog.close();
+    history.replaceState(null, "", location.pathname + location.search);
+    if (lastLink) lastLink.focus();
+  }
+  grid.addEventListener("click", e => {
+    const a = e.target.closest(".case-link");
+    if (a) lastLink = a;
+  });
+  // Back to top works both on the page and inside an open case
+  document.addEventListener("click", e => {
+    if (!e.target.closest(".to-top")) return;
+    const scroller = e.target.closest(".detail");
+    (scroller || window).scrollTo({ top: 0, behavior: reduceMotion ? "auto" : "smooth" });
+  });
+  dialog.addEventListener("cancel", e => { e.preventDefault(); closeCase(); });
+  window.addEventListener("hashchange", show);
+  show();
+</script>
+</body>
+</html>
