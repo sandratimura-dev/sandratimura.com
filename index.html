@@ -3,6 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!-- Light colours only, even when the device is set to dark mode -->
+<meta name="color-scheme" content="light only">
 <title>Sandra’s social media management portfolio</title>
 <meta name="description" content="Sandra Timura, social media manager in Copenhagen. Strategy, community building, content production and UGC for Vivino, Canvas Student, Mothery and more.">
 <link rel="canonical" href="https://www.sandratimura.com/">
@@ -27,36 +29,10 @@
     --line: #e6e6e6;
     --focus: #2a5bd7;
     --growth: #1a7f45;
-    color-scheme: light;
+    color-scheme: light only;
     box-sizing: border-box;
     padding-top: env(safe-area-inset-top, 0px);
     padding-bottom: env(safe-area-inset-bottom, 0px);
-  }
-  @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) {
-      --bg: #161616;
-      --ink: #f3f3f3;
-      --muted: #a8a8a8;
-      --tile: #2e2e2e;
-      --bar-before: #7a7a7a;
-      --tile-ink: #e8e8e8;
-      --line: #333333;
-      --focus: #8fb0ff;
-    --growth: #4cc27a;
-      color-scheme: dark;
-    }
-  }
-  :root[data-theme="dark"] {
-    --bg: #161616;
-    --ink: #f3f3f3;
-    --muted: #a8a8a8;
-    --tile: #2e2e2e;
-    --bar-before: #7a7a7a;
-    --tile-ink: #e8e8e8;
-    --line: #333333;
-    --focus: #8fb0ff;
-    --growth: #4cc27a;
-    color-scheme: dark;
   }
   *, *::before, *::after { box-sizing: inherit; }
   html { scroll-padding-top: env(safe-area-inset-top, 0px); }
